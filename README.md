@@ -34,3 +34,52 @@ Oversees the project timeline, resources, and team collaboration. The project ma
 
 ### Quality Assurance Tester
 Responsible for testing the application to identify bugs and ensure quality. The QA tester will develop test cases and perform manual and automated tests to validate functionalities.
+
+## Database Design
+
+### Key Entities
+
+1. **Users**
+   - **Fields**:
+     - `user_id`: Unique identifier for each user.
+     - `name`: Full name of the user.
+     - `email`: User's email address.
+     - `password`: Hashed password for authentication.
+     - `role`: Role of the user (e.g., guest, host).
+   - **Relationships**: A user can have multiple properties and bookings.
+
+2. **Properties**
+   - **Fields**:
+     - `property_id`: Unique identifier for each property.
+     - `user_id`: Foreign key referencing the owner (User).
+     - `location`: Address or location of the property.
+     - `price_per_night`: Cost of staying per night.
+     - `description`: Brief description of the property.
+   - **Relationships**: A property belongs to one user and can have multiple bookings and reviews.
+
+3. **Bookings**
+   - **Fields**:
+     - `booking_id`: Unique identifier for each booking.
+     - `property_id`: Foreign key referencing the booked property.
+     - `user_id`: Foreign key referencing the user who made the booking.
+     - `start_date`: Start date of the booking.
+     - `end_date`: End date of the booking.
+   - **Relationships**: A booking belongs to one property and one user.
+
+4. **Reviews**
+   - **Fields**:
+     - `review_id`: Unique identifier for each review.
+     - `property_id`: Foreign key referencing the reviewed property.
+     - `user_id`: Foreign key referencing the user who wrote the review.
+     - `rating`: Rating given by the user (e.g., 1 to 5 stars).
+     - `comment`: Textual feedback about the property.
+   - **Relationships**: A review belongs to one property and one user.
+
+5. **Payments**
+   - **Fields**:
+     - `payment_id`: Unique identifier for each payment.
+     - `booking_id`: Foreign key referencing the associated booking.
+     - `amount`: Total amount paid.
+     - `payment_date`: Date when the payment was made.
+     - `payment_method`: Method used for payment (e.g., credit card, PayPal).
+   - **Relationships**: A payment is linked to one booking.
