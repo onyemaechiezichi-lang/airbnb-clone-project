@@ -83,3 +83,45 @@ Responsible for testing the application to identify bugs and ensure quality. The
      - `payment_date`: Date when the payment was made.
      - `payment_method`: Method used for payment (e.g., credit card, PayPal).
    - **Relationships**: A payment is linked to one booking.
+
+## Feature Breakdown
+
+### User Management
+This feature enables users to register, log in, and manage their profiles. It ensures that each user can securely access their data and settings.
+
+### Property Management
+Hosts can create, update, and delete their property listings through this feature. This allows for efficient management of available accommodations.
+
+### Booking System
+This system enables users to search for properties, select dates, and make reservations. It streamlines the booking process and enhances user experience.
+
+### Review System
+Users can leave reviews and ratings for properties they have stayed in. This feature fosters transparency and helps future guests make informed decisions.
+
+### Payment Processing
+This feature handles all payment transactions securely. It ensures that users can pay for bookings safely, protecting sensitive financial information.
+
+## API Security
+
+### Authentication
+We will implement token-based authentication using JWT to verify user identities. This ensures that only authorized users can access certain endpoints.
+
+### Authorization
+Authorization checks will be enforced to restrict access to resources based on user roles. This is crucial for protecting sensitive actions and data.
+
+### Rate Limiting
+Rate limiting will be implemented to prevent abuse of the API. This protects the application from potential denial-of-service attacks and ensures fair usage.
+
+### Importance of Security
+Securing the APIs is vital to protect user data, prevent unauthorized access, and secure payment information. This builds trust with users and safeguards the integrity of the platform.
+
+## CI/CD Pipeline
+
+### What is CI/CD?
+Continuous Integration (CI) and Continuous Deployment (CD) are practices that automate the process of code integration and deployment. CI/CD pipelines help ensure that code changes are automatically tested and deployed, reducing errors and speeding up development.
+
+### Importance for the Project
+Implementing CI/CD pipelines is essential for maintaining code quality and facilitating quick iterations. It allows the team to deploy updates more frequently and reliably.
+
+### Tools
+We could utilize tools like GitHub Actions for automating workflows and Docker for containerization. These tools simplify the development process and enhance collaboration among team members.
